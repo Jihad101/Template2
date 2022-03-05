@@ -383,49 +383,144 @@ header .container .form i {
 }
 
 .design .image,
-.design .text{
-    position: relative;
-    z-index: 2;
-    flex:1;
+.design .text {
+  position: relative;
+  z-index: 2;
+  flex: 1;
 }
 
-.design .image img{
-    position: relative;
-    bottom: -170px;
+.design .image {
+  text-align: center;
 }
 
-
-.design .text{
-    color: white;
-    padding: 50px;
-    background-color: var(--transparent-color);
-}
-@media (max-width:767px){
-    .design .image img{
-        display: none;
-    }
-    .design .text{
-        width: 100%;
-        justify-content: left;
-    }
-}
-.design .text h2{
-font-size: 40px;
-font-weight: normal;
-margin-bottom: 30px;
-text-transform: uppercase;
+@media (max-width: 767px) {
+  .design .image img {
+    display: none;
+  }
+  .design .text {
+    min-width: 100%;
+  }
 }
 
-.design .text ul li{
-    padding: 15px 0;
+.design .image img {
+  position: relative;
+  bottom: -170px;
 }
 
-.design .text ul li::before{
-content: "\f108";    
-font-family: "Font Awesome 6 Free";
-font-weight: 800;
-position: relative;
-margin-right: 10px;
-top: 1px;
+.design .text {
+  color: white;
+  width: 100%;
+  max-width: 100%;
+  padding: 50px;
+  background-color: var(--transparent-color);
+}
+
+.design .text h2 {
+  font-size: 40px;
+  font-weight: normal;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.design .text ul li {
+  padding: 15px 0;
+}
+
+.design .text ul li::before {
+  content: "\f108";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 800;
+  position: relative;
+  margin-right: 10px;
+  top: 1px;
 }
 /* End Design */
+
+/* Start Portfolio */
+
+.portfolio {
+  padding-top: var(--sect-padding);
+  padding-bottom: var(--sect-padding);
+}
+.portfolio .shuffle {
+  display: flex;
+  justify-content: center;
+}
+.portfolio .shuffle li {
+  padding: 10px;
+}
+
+.portfolio .shuffle li.active {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.portfolio .imgs-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+justify-content: center;
+align-items: center;
+}
+.portfolio .imgs-container .box {
+  position: relative;
+  overflow: hidden;
+  padding: 2px;
+}
+@media (min-width: 768px) {
+  .portfolio .imgs-container .box {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 1199px) {
+  .portfolio .imgs-container .box {
+    flex-basis: 25%;
+  }
+}
+
+.portfolio .imgs-container .box img {
+  max-width: 100%;
+  transition: 0.5s ease;
+}
+
+.portfolio .imgs-container .box img:hover {
+  transform: rotate(3deg) scale(1.1);
+}
+
+.portfolio .imgs-container .box .caption {
+  position: absolute;
+  bottom: -100;
+  left: 0;
+  padding: 20px;
+  background-color: white;
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.portfolio .imgs-container .box:hover .caption {
+  bottom: 0;
+}
+
+.portfolio .imgs-container .box:hover .caption h4 {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.portfolio .imgs-container .box:hover .caption p {
+  color: var(--main-color);
+}
+
+.portfolio .more{
+text-decoration: none;
+text-transform: capitalize;
+width: fit-content;
+padding: 10px 15px;
+text-align: center;
+background-color: var(--main-color);
+color: #fff;
+margin:10px auto;
+font-size: 15px;
+font-weight: bold;
+}
+/* End Portfolio */
