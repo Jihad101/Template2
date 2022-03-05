@@ -1,0 +1,160 @@
+/* Start Variables */
+:root {
+  --main-color: #19c8fa;
+}
+/* End Variables */
+
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #000;
+}
+ul {
+  list-style: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small Screens */
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+/* Medium Screens */
+@media (min-width: 992px) {
+  .container {
+    width: 992px;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+/* End Global Rules */
+
+/* Start Header */
+header {
+  width: 100%;
+  min-height: 99px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header .container::after {
+  content: "";
+  position: absolute;
+  background-color: #a2a2a2;
+  bottom: 0;
+  left: 15px;
+  width: calc(100% - 30px);
+  height: 1px;
+}
+
+header .container .logo img {
+  width: 60px;
+}
+
+.toggle-menu {
+  color: white;
+  font-size: 22px;
+}
+
+@media (min-width: 767px) {
+  .toggle-menu {
+    display: none;
+  }
+}
+
+header .container nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header .container ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+header .container ul li a {
+  padding: 40px 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  display: block;
+  transition: 0.3 ease;
+  position: relative;
+  z-index: 2;
+}
+
+header .container ul li a.active,
+header .container ul li a:hover {
+  color: var(--main-color);
+  border-bottom: solid 1px var(--main-color);
+}
+@media (max-width: 768px) {
+    header .container ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+    header .container ul li a {
+        padding: 20px;
+        font-size: 16px;
+      }
+  }
+header .container .form {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  margin-left: 40px;
+  border-left: 1px solid #fff;
+  padding: 20px;
+}
+
+header .container .form i {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* End Header */
