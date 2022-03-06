@@ -459,8 +459,8 @@ header .container .form i {
   display: flex;
   flex-wrap: wrap;
   margin-top: 60px;
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 .portfolio .imgs-container .box {
   position: relative;
@@ -511,16 +511,151 @@ align-items: center;
   color: var(--main-color);
 }
 
-.portfolio .more{
-text-decoration: none;
-text-transform: capitalize;
-width: fit-content;
-padding: 10px 15px;
-text-align: center;
-background-color: var(--main-color);
-color: #fff;
-margin:10px auto;
-font-size: 15px;
-font-weight: bold;
+.portfolio .more {
+  text-decoration: none;
+  text-transform: uppercase;
+  width: fit-content;
+  padding: 10px 15px;
+  text-align: center;
+  background-color: var(--main-color);
+  color: #fff;
+  margin: 15px auto;
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
 }
 /* End Portfolio */
+
+/* Start Video */
+.video {
+  position: relative;
+}
+.video::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0 0 0/ 40%);
+}
+.video video {
+  width: 100%;
+}
+.video .text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--transparent-color);
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+.video .text h2 {
+  font-weight: normal;
+  margin: 0 0 20px;
+}
+
+.video .text p {
+  margin: 0 0 20px;
+}
+
+.video .text button {
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  border: 0;
+  padding: 10px 20px;
+  font-size: 15px;
+}
+
+/* End Video */
+
+/* Start About */
+.about {
+  padding-top: var(--sect-padding);
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+.about .img {
+  position: relative;
+  bottom: -100px;
+  margin-top: -100px;
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .about .img {
+    bottom: -6px;
+    margin-top: -60px;
+  }
+}
+
+/* End About */
+
+/* Start Stats */
+.stats {
+  background-image: url("../Images/stats.png");
+  background-size: cover;
+  position: relative;
+}
+
+.stats .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: var(--sect-padding) 0;
+}
+.stats .container .box {
+  background-color: var(--transparent-color);
+  text-align: center;
+  padding: 50px;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .stats .container .box {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .stats .container .box {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .stats .container .box {
+    flex-basis: 25%;
+  }
+}
+
+.stats .container .box i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+}
+
+.stats .container .box .number {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.stats .container .box p {
+  font-size: 13px;
+  
+}
+
+/* End Stats */
+
+/*  Start Skills */
+/*  End Skills */
