@@ -914,10 +914,10 @@ q::after {
   transform: translateX(-50%);
   bottom: 0px;
 }
-.pricing .plans .plan .foot{
+.pricing .plans .plan .foot {
   margin: 30px auto;
 }
-.pricing .plans .plan .foot a{
+.pricing .plans .plan .foot a {
   margin: 20px;
   color: black;
   border: 1px solid var(--main-color);
@@ -926,20 +926,20 @@ q::after {
   text-transform: uppercase;
 }
 
-.pricing .contact-text{
+.pricing .contact-text {
   text-align: center;
   font-size: 20px;
   margin: 40px auto;
 }
 
-.pricing .contact-link{
-text-decoration: none;
-text-transform: uppercase;
+.pricing .contact-link {
+  text-decoration: none;
+  text-transform: uppercase;
   text-align: center;
   font-size: 15px;
   margin: 20px auto 0;
   background-color: var(--main-color);
-  padding:15px 30px;
+  padding: 15px 30px;
   color: white;
   display: block;
   width: fit-content;
@@ -948,4 +948,249 @@ text-transform: uppercase;
 /* Start Pricing */
 
 /* Start Subscribe */
+.subscribe {
+  padding-top: var(--sect-padding);
+  padding-bottom: var(--sect-padding);
+  background-image: url("../Images/subscribe.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.subscribe::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0 0 0/ 50%);
+}
+
+.subscribe .container {
+  display: flex;
+  position: relative;
+  color: white;
+  justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+  .subscribe .container {
+    flex-direction: column;
+  }
+}
+
+.subscribe .container form {
+  display: flex;
+  position: relative;
+  width: 50%;
+}
+
+@media (max-width: 991px) {
+  .subscribe .container form {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.subscribe .container form i {
+  position: absolute;
+  top: 50%;
+  left: 21px;
+  transform: translateY(-50%);
+}
+
+.subscribe .container form input[type="email"] {
+  background: none;
+  border: 1px solid white;
+  border-right: none;
+  padding: 20px 20px 20px 60px;
+  caret-color: var(--main-color);
+  width: calc(100% - 130px);
+  color: white;
+}
+.subscribe .container form input[type="submit"] {
+  background-color: var(--main-color);
+  border: 1px solid white;
+  border-left: none;
+  padding: 20px;
+  width: 130px;
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.subscribe .container form input[type="email"]::placeholder {
+  color: white;
+}
+
+.subscribe .container form input[type="email"]:focus,
+.subscribe .container form input[type="email"]:focus {
+  outline: none;
+}
+.subscribe .container p {
+  width: 45%;
+  line-height: 1.5;
+}
+
+@media (max-width: 991px) {
+  .subscribe .container p {
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+    line-height: 2;
+  }
+}
+
 /* End Subscribe */
+
+/* Start Contact */
+.contact {
+  padding-top: var(--sect-padding);
+  padding-bottom: var(--sect-padding);
+}
+
+.contact .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width:767px){
+  .contact .content {
+    flex-direction: column;
+  }
+}
+
+.contact .content form {
+  flex-basis: 70%;
+}
+
+.contact .content form .main-input{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  color:var(--pale-color);
+  caret-color: var(--main-color);
+
+}
+
+.contact .content form textarea.main-input{
+  height:200px;
+}
+.contact .content form .main-input:focus{
+outline: none;  
+}
+
+.contact .content form input[type="submit"]{
+width: fit-content;
+padding: 15px 20px;  
+display: flex;
+margin-left: auto;
+background-color: var(--main-color);
+color: white;
+border: none;
+text-transform: uppercase;
+cursor: pointer;
+}
+
+.contact .content .info{
+  flex-basis: 25%;
+}
+
+@media (max-width:767px){
+  .contact .content .info{
+    order: -1;
+    text-align: center;
+  }
+}
+
+.contact .content .info h4{
+  margin-bottom: 20px;
+font-weight: 500px;
+text-transform: uppercase;
+}
+.contact .content .info span{
+  color: var(--pale-color);
+  display: block;
+  margin-bottom: 5px;
+}
+.contact .content .info h4:last-of-type{
+  margin-top: 80px;
+}
+@media (max-width:767px){
+  .contact .content .info h4:last-of-type{
+    margin-top: 30px;
+  }
+}
+.contact .content .info address{
+  line-height: 2;
+  color: var(--pale-color);
+}
+
+@media (max-width:767px){
+  .contact .content .info address{
+    margin-bottom: 30px;
+  }
+}
+/* End Contact */
+
+/* Start Footer */
+.footer{
+  padding-top: calc(var(--sect-padding) / 2);
+  padding-bottom: calc(var(--sect-padding) / 2);
+  background-image: url("../Images/subscribe.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.footer::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0 0 0/ 50%);
+}
+
+.footer .container{
+text-align: center;
+ color: white;
+ position: relative;
+}
+
+.footer .container img{
+ width: 100px;
+ margin-bottom: 20px;
+}
+
+.footer .container p:not(.copyright){
+font-size: 20px;
+font-weight: 500;
+width: fit-content;
+margin: 0 auto 20px;
+border-bottom: 1px solid var(--main-color);
+padding: 20px;
+text-transform: uppercase;
+}
+
+.footer .container .social-icons i{
+padding: 15px;
+font-weight: 800;
+margin-bottom: 20px;
+font-size: 20px;
+color: var(--main-color);
+}
+
+.footer .container .copyright{
+margin-top: 60px;
+font-size: 18px;
+text-transform: capitalize;
+}
+
+.footer .container .copyright span{
+color: var(--main-color);
+text-transform: uppercase;
+font-weight: bold;
+}
+/* End Footer */
